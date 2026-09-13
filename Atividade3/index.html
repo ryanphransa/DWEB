@@ -3,201 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokédex - Eeveelutions</title>
+    <title>Arquitetura de Software — Ryan de Lima França</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Navegação Fixa no Topo -->
     <header class="navbar">
-        <div class="nav-title">Pokédex Eevee</div>
+        <div class="nav-title">Arquitetura de Software</div>
         <nav class="nav-links">
-            <a href="#eevee" class="nav-btn normal-btn">Eevee</a>
-            <a href="#vaporeon" class="nav-btn water-btn">Vaporeon</a>
-            <a href="#jolteon" class="nav-btn electric-btn">Jolteon</a>
-            <a href="#flareon" class="nav-btn fire-btn">Flareon</a>
-            <a href="#espeon" class="nav-btn psychic-btn">Espeon</a>
-            <a href="#umbreon" class="nav-btn dark-btn">Umbreon</a>
-            <a href="#leafeon" class="nav-btn grass-btn">Leafeon</a>
-            <a href="#glaceon" class="nav-btn ice-btn">Glaceon</a>
-            <a href="#sylveon" class="nav-btn fairy-btn">Sylveon</a>
+            <a href="#introducao" class="nav-btn">Introdução</a>
+            <a href="#conceitos" class="nav-btn">Conceitos</a>
+            <a href="#padroes" class="nav-btn">Estilos</a>
+            <a href="#escolha" class="nav-btn">Escolha</a>
+            <a href="#auxiliares" class="nav-btn">Padrões</a>
+            <a href="#tendencias" class="nav-btn">Tendências</a>
+            <a href="#exemplo" class="nav-btn">Exemplo</a>
+            <a href="#conclusao" class="nav-btn">Conclusão</a>
+            <a href="#referencias" class="nav-btn">Referências</a>
         </nav>
     </header>
 
     <main class="content-container">
 
-        <!-- EEVEE -->
-        <section id="eevee" class="pokemon-card">
-            <div class="card-left">
-                <span class="pokedex-num">#0133</span>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png" alt="Eevee">
-                <h2>Eevee</h2>
-                <span class="type-badge normal">Normal</span>
+        <!-- Banner / Capa -->
+        <section class="hero-card">
+            <span class="sub-tag">Atividade 2 — Pesquisa (2026)</span>
+            <h1>Arquitetura de Software</h1>
+            <p class="author">Por <strong>Ryan de Lima França</strong></p>
+            <p class="hero-desc">Conceitos, padrões, escolha da arquitetura e tendências fundamentais para o desenvolvimento de sistemas modernos.</p>
+        </section>
+
+        <!-- 1. INTRODUÇÃO -->
+        <section id="introducao" class="doc-card">
+            <h2>1. Introdução</h2>
+            <p>A arquitetura de software é a organização fundamental de um sistema de software. Ela define como os principais componentes são divididos, como se comunicam, quais responsabilidades cada parte possui e quais decisões técnicas orientam a construção e a evolução do sistema. Em outras palavras, a arquitetura funciona como uma visão estrutural que conecta os requisitos do negócio às decisões de implementação.</p>
+            <p>Uma boa arquitetura não significa simplesmente utilizar tecnologias modernas ou adotar o maior número possível de serviços. A escolha deve considerar o problema que precisa ser resolvido, os requisitos funcionais e não funcionais, o tamanho da equipe, os custos, a necessidade de escalabilidade, a segurança, a disponibilidade e a facilidade de manutenção. A própria documentação técnica da Microsoft destaca que nenhum estilo ou padrão arquitetural é adequado para todas as situações.</p>
+            <p>Por isso, estudar arquitetura de software é importante tanto para projetos pequenos quanto para sistemas de grande escala. Uma decisão arquitetural tomada no início pode influenciar o desempenho, a capacidade de evolução, a confiabilidade e o custo de manutenção durante muitos anos.</p>
+        </section>
+
+        <!-- 2. CONCEITOS FUNDAMENTAIS -->
+        <section id="conceitos" class="doc-card">
+            <h2>2. Conceitos Fundamentais</h2>
+            
+            <h3>2.1 O que é arquitetura de software?</h3>
+            <p>Arquitetura de software pode ser entendida como o conjunto das decisões estruturais mais importantes de um sistema. Entre essas decisões estão a divisão do sistema em módulos ou serviços, as formas de comunicação entre componentes, a organização dos dados, os mecanismos de segurança e as estratégias de implantação e operação.</p>
+            <p>É importante diferenciar arquitetura de implementação. A implementação trata de detalhes como classes, funções e algoritmos específicos, enquanto a arquitetura trata principalmente das fronteiras e relações entre as partes do sistema. Assim, a arquitetura procura responder perguntas como: <em>"quais componentes devem existir?"</em>, <em>"quem é responsável por determinada função?"</em>, <em>"como os componentes irão se comunicar?"</em> e <em>"como o sistema poderá evoluir no futuro?"</em></p>
+
+            <h3>2.2 Requisitos funcionais e não funcionais</h3>
+            <p>Os <strong>requisitos funcionais</strong> descrevem o que o sistema deve fazer, como cadastrar usuários, realizar pagamentos ou gerar relatórios. Já os <strong>requisitos não funcionais</strong> descrevem características de qualidade e restrições, como desempenho, segurança, disponibilidade, escalabilidade, confiabilidade e facilidade de manutenção.</p>
+            <p>Na prática, os requisitos não funcionais possuem grande influência sobre a arquitetura. Um sistema interno pequeno pode funcionar muito bem com uma aplicação monolítica simples, enquanto uma plataforma que precisa atender milhões de usuários simultaneamente pode necessitar de mecanismos de escalabilidade, cache, filas, observabilidade e distribuição de carga.</p>
+        </section>
+
+        <!-- 3. PADRÕES E ESTILOS ARQUITETURAIS -->
+        <section id="padroes" class="doc-card">
+            <h2>3. Padrões e Estilos Arquiteturais</h2>
+
+            <div class="topic-box">
+                <h3>3.1 Arquitetura em camadas</h3>
+                <p>Organiza o sistema em níveis com responsabilidades distintas (ex: apresentação, aplicação/negócio e acesso a dados). Essa separação facilita a compreensão do código e permite modificações pontuais. Sua vantagem é a simplicidade, mas se mal definida, pode gerar forte acoplamento.</p>
             </div>
-            <div class="card-right">
-                <p class="description">Seu código genético instável permite que ele evolua de várias maneiras para se adaptar ao ambiente.</p>
-                <div class="details-grid">
-                    <div><strong>Método:</strong> Forma Base</div>
-                    <div><strong>Habilidade:</strong> Adaptabilidade / Fuga</div>
-                    <div><strong>Altura / Peso:</strong> 0,3 m / 6,5 kg</div>
-                    <div><strong>Principal Atributo:</strong> Defesa Especial (65)</div>
-                </div>
+
+            <div class="topic-box">
+                <h3>3.2 Arquitetura monolítica</h3>
+                <p>As principais funcionalidades são executadas como parte de uma única unidade de implantação. Possui menor complexidade operacional para desenvolver, testar e implantar. Como desvantagem, em sistemas muito grandes é mais difícil escalar ou implantar apenas uma funcionalidade específica.</p>
+            </div>
+
+            <div class="topic-box">
+                <h3>3.3 Microsserviços</h3>
+                <p>Divide a aplicação em serviços pequenos e autônomos, cada um responsável por uma capacidade de negócio. Aumenta a autonomia das equipes e a escalabilidade independente, mas introduz complexidades como latência de rede, observabilidade distribuída e consistência de dados. Exige práticas maduras de DevOps.</p>
+            </div>
+
+            <div class="topic-box">
+                <h3>3.4 Arquitetura orientada a eventos</h3>
+                <p>Componentes produtores geram eventos e consumidores reagem a eles por meio de brokers de mensagens, reduzindo o acoplamento direto. É ideal para grandes volumes de dados ou tempo real (ex: IoT e sistemas financeiros). Desafios incluem consistência eventual e ordenação de mensagens.</p>
+            </div>
+
+            <div class="topic-box">
+                <h3>3.5 Clean Architecture</h3>
+                <p>Mantém as regras de negócio independentes de detalhes externos como bancos de dados e interfaces. Reduz o impacto de mudanças tecnológicas sobre o núcleo da aplicação, sendo muito útil para domínios complexos. Seu custo é uma maior quantidade de abstrações.</p>
             </div>
         </section>
 
-        <!-- VAPOREON -->
-        <section id="vaporeon" class="pokemon-card">
-            <div class="card-left">
-                <span class="pokedex-num">#0134</span>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/134.png" alt="Vaporeon">
-                <h2>Vaporeon</h2>
-                <span class="type-badge water">Água</span>
+        <!-- 4. ESCOLHA DA ARQUITETURA -->
+        <section id="escolha" class="doc-card">
+            <h2>4. Escolha da Arquitetura</h2>
+            <p>Não existe uma arquitetura universalmente superior. A escolha deve começar pelo problema e pelos requisitos, e não pela preferência por uma tecnologia específica. Os principais critérios são:</p>
+            
+            <div class="grid-list">
+                <div class="grid-item"><strong>Complexidade do domínio:</strong> Necessidade de fronteiras claras para regras de negócio.</div>
+                <div class="grid-item"><strong>Escalabilidade:</strong> Avaliar se é necessário escalar o todo ou partes.</div>
+                <div class="grid-item"><strong>Equipe:</strong> Tamanho, conhecimento e capacidade operacional.</div>
+                <div class="grid-item"><strong>Custo:</strong> Infraestrutura, ferramentas, monitoramento e manutenção.</div>
+                <div class="grid-item"><strong>Disponibilidade:</strong> Nível de tolerância a falhas.</div>
+                <div class="grid-item"><strong>Segurança:</strong> Autenticação, autorização e proteção de dados.</div>
+                <div class="grid-item"><strong>Velocidade de evolução:</strong> Frequência de alterações e implantações.</div>
             </div>
-            <div class="card-right">
-                <p class="description">Sua estrutura celular é semelhante às moléculas de água, permitindo que ele se derreta e fique invisível na água.</p>
-                <div class="details-grid">
-                    <div><strong>Método:</strong> Pedra da Água</div>
-                    <div><strong>Habilidade:</strong> Absorção de Água</div>
-                    <div><strong>Altura / Peso:</strong> 1,0 m / 29,0 kg</div>
-                    <div><strong>Principal Atributo:</strong> HP (130)</div>
-                </div>
+
+            <p class="highlight-text"><strong>Princípio chave:</strong> Evite a complexidade antecipada. Em muitos casos, começar com um monólito modular e evoluir conforme surgem necessidades reais é uma estratégia mais adequada.</p>
+        </section>
+
+        <!-- 5. PADRÕES QUE AUXILIAM -->
+        <section id="auxiliares" class="doc-card">
+            <h2>5. Padrões que Auxiliam a Arquitetura</h2>
+            <p>Padrões resolvem problemas recorrentes em arquiteturas distribuídas:</p>
+            <ul class="styled-list">
+                <li><strong>API Gateway:</strong> Funciona como ponto de entrada para os clientes e encaminha requisições aos serviços.</li>
+                <li><strong>Circuit Breaker:</strong> Evita que a falha de um serviço provoque em cascata a falha de outros.</li>
+                <li><strong>Saga:</strong> Coordena operações que envolvem múltiplos serviços com dados independentes.</li>
+                <li><strong>Strangler Fig:</strong> Substitui gradualmente partes de um sistema legado por componentes novos.</li>
+            </ul>
+        </section>
+
+        <!-- 6. TENDÊNCIAS -->
+        <section id="tendencias" class="doc-card">
+            <h2>6. Tendências em Arquitetura de Software</h2>
+            <div class="grid-list">
+                <div class="grid-item"><strong>Cloud-native:</strong> Uso de elasticidade, contêineres e automação em nuvem.</div>
+                <div class="grid-item"><strong>Mensageria / Eventos:</strong> Processamento assíncrono para menor acoplamento.</div>
+                <div class="grid-item"><strong>Observabilidade:</strong> Logs, métricas e rastreamento distribuído essenciais.</div>
+                <div class="grid-item"><strong>Automação e DevOps:</strong> CI/CD e infraestrutura como código.</div>
+                <div class="grid-item"><strong>Serverless:</strong> Execução de funções sem gerenciar infraestrutura diretamente.</div>
+                <div class="grid-item"><strong>Arquiteturas Modulares:</strong> Foco em evolução simples sem acoplamento excessivo.</div>
             </div>
         </section>
 
-        <!-- JOLTEON -->
-        <section id="jolteon" class="pokemon-card">
-            <div class="card-left">
-                <span class="pokedex-num">#0135</span>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/135.png" alt="Jolteon">
-                <h2>Jolteon</h2>
-                <span class="type-badge electric">Elétrico</span>
-            </div>
-            <div class="card-right">
-                <p class="description">Acumula íons negativos no ar para disparar trovões de 10.000 volts. Seus pelos se transformam em agulhas afiadas quando irritado.</p>
-                <div class="details-grid">
-                    <div><strong>Método:</strong> Pedra do Trovão</div>
-                    <div><strong>Habilidade:</strong> Absorção Elétrica</div>
-                    <div><strong>Altura / Peso:</strong> 0,8 m / 24,5 kg</div>
-                    <div><strong>Principal Atributo:</strong> Velocidade (130)</div>
-                </div>
+        <!-- 7. EXEMPLO PRÁTICO -->
+        <section id="exemplo" class="doc-card">
+            <h2>7. Exemplo Prático</h2>
+            <div class="example-box">
+                <p>Considere uma pequena loja virtual criada por uma equipe de três desenvolvedores. No início, ela precisa cadastrar produtos, permitir login, receber pedidos e gerar relatórios simples. Uma aplicação <strong>monolítica modular</strong> atende perfeitamente.</p>
+                <p>Com o crescimento da empresa, surgem demandas por milhares de pedidos por minuto, integrações de pagamento e notificações. Nesse momento, faz sentido separar determinadas capacidades em <strong>serviços independentes</strong>.</p>
+                <p><em>Isso demonstra que a arquitetura deve evoluir em resposta às necessidades reais, e não prever todos os problemas futuros no dia um.</em></p>
             </div>
         </section>
 
-        <!-- FLAREON -->
-        <section id="flareon" class="pokemon-card">
-            <div class="card-left">
-                <span class="pokedex-num">#0136</span>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/136.png" alt="Flareon">
-                <h2>Flareon</h2>
-                <span class="type-badge fire">Fogo</span>
-            </div>
-            <div class="card-right">
-                <p class="description">Guarda ar em sua bolsa de fogo interna, aquecendo-o até mais de 1.700 °C antes de expelir chamas intensas.</p>
-                <div class="details-grid">
-                    <div><strong>Método:</strong> Pedra do Fogo</div>
-                    <div><strong>Habilidade:</strong> Absorção de Fogo</div>
-                    <div><strong>Altura / Peso:</strong> 0,9 m / 25,0 kg</div>
-                    <div><strong>Principal Atributo:</strong> Ataque (130)</div>
-                </div>
-            </div>
+        <!-- 8. CONCLUSÃO -->
+        <section id="conclusao" class="doc-card">
+            <h2>8. Conclusão</h2>
+            <p>A arquitetura de software é uma das decisões mais importantes no desenvolvimento de sistemas, pois estabelece a organização dos componentes e influencia diretamente características como manutenção, desempenho, segurança, escalabilidade e confiabilidade.</p>
+            <p>A principal conclusão é que <strong>não existe uma solução única para todos os projetos</strong>. Uma boa arquitetura é aquela que resolve o problema de forma sustentável, facilita a evolução do software e controla o acoplamento. Mais do que seguir tendências, o desenvolvedor deve entender os compromissos de cada decisão.</p>
         </section>
 
-        <!-- ESPEON -->
-        <section id="espeon" class="pokemon-card">
-            <div class="card-left">
-                <span class="pokedex-num">#0196</span>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/196.png" alt="Espeon">
-                <h2>Espeon</h2>
-                <span class="type-badge psychic">Psíquico</span>
-            </div>
-            <div class="card-right">
-                <p class="description">Usa os pelos finos do corpo para sentir as correntes de ar e prever os movimentos dos oponentes ou o clima.</p>
-                <div class="details-grid">
-                    <div><strong>Método:</strong> Amizade Alta (Dia)</div>
-                    <div><strong>Habilidade:</strong> Sincronia</div>
-                    <div><strong>Altura / Peso:</strong> 0,9 m / 26,5 kg</div>
-                    <div><strong>Principal Atributo:</strong> Atq. Especial (130)</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- UMBREON -->
-        <section id="umbreon" class="pokemon-card">
-            <div class="card-left">
-                <span class="pokedex-num">#0197</span>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/197.png" alt="Umbreon">
-                <h2>Umbreon</h2>
-                <span class="type-badge dark">Sombrio</span>
-            </div>
-            <div class="card-right">
-                <p class="description">Exposto à luz da lua, os anéis em seu corpo brilham no escuro, amedrontando qualquer um que esteja por perto.</p>
-                <div class="details-grid">
-                    <div><strong>Método:</strong> Amizade Alta (Noite)</div>
-                    <div><strong>Habilidade:</strong> Sincronia</div>
-                    <div><strong>Altura / Peso:</strong> 1,0 m / 27,0 kg</div>
-                    <div><strong>Principal Atributo:</strong> Def. Especial (130)</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- LEAFEON -->
-        <section id="leafeon" class="pokemon-card">
-            <div class="card-left">
-                <span class="pokedex-num">#0470</span>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/470.png" alt="Leafeon">
-                <h2>Leafeon</h2>
-                <span class="type-badge grass">Planta</span>
-            </div>
-            <div class="card-right">
-                <p class="description">Realiza fotossíntese como uma planta. Por conta disso, o ar ao seu redor é sempre limpo e puro.</p>
-                <div class="details-grid">
-                    <div><strong>Método:</strong> Pedra da Folha</div>
-                    <div><strong>Habilidade:</strong> Guarda de Folha</div>
-                    <div><strong>Altura / Peso:</strong> 1,0 m / 25,5 kg</div>
-                    <div><strong>Principal Atributo:</strong> Defesa (130)</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- GLACEON -->
-        <section id="glaceon" class="pokemon-card">
-            <div class="card-left">
-                <span class="pokedex-num">#0471</span>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/471.png" alt="Glaceon">
-                <h2>Glaceon</h2>
-                <span class="type-badge ice">Gelo</span>
-            </div>
-            <div class="card-right">
-                <p class="description">Consegue baixar a temperatura do seu corpo rapidamente para congelar os pelos e transformá-los em espinhos de gelo.</p>
-                <div class="details-grid">
-                    <div><strong>Método:</strong> Pedra do Gelo</div>
-                    <div><strong>Habilidade:</strong> Manto de Gelo</div>
-                    <div><strong>Altura / Peso:</strong> 0,8 m / 25,9 kg</div>
-                    <div><strong>Principal Atributo:</strong> Def. Especial (110)</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SYLVEON -->
-        <section id="sylveon" class="pokemon-card">
-            <div class="card-left">
-                <span class="pokedex-num">#0700</span>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/700.png" alt="Sylveon">
-                <h2>Sylveon</h2>
-                <span class="type-badge fairy">Fada</span>
-            </div>
-            <div class="card-right">
-                <p class="description">Envia ondas de carinho através de seus laços sensoriais para acalmar os sentimentos hostis dos oponentes.</p>
-                <div class="details-grid">
-                    <div><strong>Método:</strong> Amizade + Golpe Fada</div>
-                    <div><strong>Habilidade:</strong> Encanto</div>
-                    <div><strong>Altura / Peso:</strong> 1,0 m / 23,5 kg</div>
-                    <div><strong>Principal Atributo:</strong> Def. Especial (130)</div>
-                </div>
-            </div>
+        <!-- 9. REFERÊNCIAS -->
+        <section id="referencias" class="doc-card">
+            <h2>9. Referências</h2>
+            <ul class="ref-list">
+                <li>MICROSOFT. Azure Architecture Center. Architecture Styles. 2025-2026.</li>
+                <li>MICROSOFT. Azure Architecture Center. Estilo de arquitetura de microsserviços. 2026.</li>
+                <li>MICROSOFT. Azure Architecture Center. Padrões de design para microsserviços. 2026.</li>
+                <li>MICROSOFT. Azure Architecture Center. Projetar uma arquitetura de microsserviços. 2026.</li>
+                <li>MICROSOFT. Azure Architecture Center. Event-driven architecture style. 2026.</li>
+            </ul>
         </section>
 
     </main>
+
+    <footer class="footer">
+        <p>Desenvolvido com base na pesquisa de Ryan de Lima França — 2026</p>
+    </footer>
 
 </body>
 </html>
