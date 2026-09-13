@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex - Eeveelutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navegação Fixa no Topo -->
+    <header class="navbar">
+        <div class="nav-title">Pokédex Eevee</div>
+        <nav class="nav-links">
+            <a href="#eevee" class="nav-btn normal-btn">Eevee</a>
+            <a href="#vaporeon" class="nav-btn water-btn">Vaporeon</a>
+            <a href="#jolteon" class="nav-btn electric-btn">Jolteon</a>
+            <a href="#flareon" class="nav-btn fire-btn">Flareon</a>
+            <a href="#espeon" class="nav-btn psychic-btn">Espeon</a>
+            <a href="#umbreon" class="nav-btn dark-btn">Umbreon</a>
+            <a href="#leafeon" class="nav-btn grass-btn">Leafeon</a>
+            <a href="#glaceon" class="nav-btn ice-btn">Glaceon</a>
+            <a href="#sylveon" class="nav-btn fairy-btn">Sylveon</a>
+        </nav>
+    </header>
+
+    <main class="content-container">
+
+        <!-- EEVEE -->
+        <section id="eevee" class="pokemon-card">
+            <div class="card-left">
+                <span class="pokedex-num">#0133</span>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png" alt="Eevee">
+                <h2>Eevee</h2>
+                <span class="type-badge normal">Normal</span>
+            </div>
+            <div class="card-right">
+                <p class="description">Seu código genético instável permite que ele evolua de várias maneiras para se adaptar ao ambiente.</p>
+                <div class="details-grid">
+                    <div><strong>Método:</strong> Forma Base</div>
+                    <div><strong>Habilidade:</strong> Adaptabilidade / Fuga</div>
+                    <div><strong>Altura / Peso:</strong> 0,3 m / 6,5 kg</div>
+                    <div><strong>Principal Atributo:</strong> Defesa Especial (65)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VAPOREON -->
+        <section id="vaporeon" class="pokemon-card">
+            <div class="card-left">
+                <span class="pokedex-num">#0134</span>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/134.png" alt="Vaporeon">
+                <h2>Vaporeon</h2>
+                <span class="type-badge water">Água</span>
+            </div>
+            <div class="card-right">
+                <p class="description">Sua estrutura celular é semelhante às moléculas de água, permitindo que ele se derreta e fique invisível na água.</p>
+                <div class="details-grid">
+                    <div><strong>Método:</strong> Pedra da Água</div>
+                    <div><strong>Habilidade:</strong> Absorção de Água</div>
+                    <div><strong>Altura / Peso:</strong> 1,0 m / 29,0 kg</div>
+                    <div><strong>Principal Atributo:</strong> HP (130)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JOLTEON -->
+        <section id="jolteon" class="pokemon-card">
+            <div class="card-left">
+                <span class="pokedex-num">#0135</span>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/135.png" alt="Jolteon">
+                <h2>Jolteon</h2>
+                <span class="type-badge electric">Elétrico</span>
+            </div>
+            <div class="card-right">
+                <p class="description">Acumula íons negativos no ar para disparar trovões de 10.000 volts. Seus pelos se transformam em agulhas afiadas quando irritado.</p>
+                <div class="details-grid">
+                    <div><strong>Método:</strong> Pedra do Trovão</div>
+                    <div><strong>Habilidade:</strong> Absorção Elétrica</div>
+                    <div><strong>Altura / Peso:</strong> 0,8 m / 24,5 kg</div>
+                    <div><strong>Principal Atributo:</strong> Velocidade (130)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FLAREON -->
+        <section id="flareon" class="pokemon-card">
+            <div class="card-left">
+                <span class="pokedex-num">#0136</span>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/136.png" alt="Flareon">
+                <h2>Flareon</h2>
+                <span class="type-badge fire">Fogo</span>
+            </div>
+            <div class="card-right">
+                <p class="description">Guarda ar em sua bolsa de fogo interna, aquecendo-o até mais de 1.700 °C antes de expelir chamas intensas.</p>
+                <div class="details-grid">
+                    <div><strong>Método:</strong> Pedra do Fogo</div>
+                    <div><strong>Habilidade:</strong> Absorção de Fogo</div>
+                    <div><strong>Altura / Peso:</strong> 0,9 m / 25,0 kg</div>
+                    <div><strong>Principal Atributo:</strong> Ataque (130)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESPEON -->
+        <section id="espeon" class="pokemon-card">
+            <div class="card-left">
+                <span class="pokedex-num">#0196</span>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/196.png" alt="Espeon">
+                <h2>Espeon</h2>
+                <span class="type-badge psychic">Psíquico</span>
+            </div>
+            <div class="card-right">
+                <p class="description">Usa os pelos finos do corpo para sentir as correntes de ar e prever os movimentos dos oponentes ou o clima.</p>
+                <div class="details-grid">
+                    <div><strong>Método:</strong> Amizade Alta (Dia)</div>
+                    <div><strong>Habilidade:</strong> Sincronia</div>
+                    <div><strong>Altura / Peso:</strong> 0,9 m / 26,5 kg</div>
+                    <div><strong>Principal Atributo:</strong> Atq. Especial (130)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UMBREON -->
+        <section id="umbreon" class="pokemon-card">
+            <div class="card-left">
+                <span class="pokedex-num">#0197</span>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/197.png" alt="Umbreon">
+                <h2>Umbreon</h2>
+                <span class="type-badge dark">Sombrio</span>
+            </div>
+            <div class="card-right">
+                <p class="description">Exposto à luz da lua, os anéis em seu corpo brilham no escuro, amedrontando qualquer um que esteja por perto.</p>
+                <div class="details-grid">
+                    <div><strong>Método:</strong> Amizade Alta (Noite)</div>
+                    <div><strong>Habilidade:</strong> Sincronia</div>
+                    <div><strong>Altura / Peso:</strong> 1,0 m / 27,0 kg</div>
+                    <div><strong>Principal Atributo:</strong> Def. Especial (130)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEAFEON -->
+        <section id="leafeon" class="pokemon-card">
+            <div class="card-left">
+                <span class="pokedex-num">#0470</span>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/470.png" alt="Leafeon">
+                <h2>Leafeon</h2>
+                <span class="type-badge grass">Planta</span>
+            </div>
+            <div class="card-right">
+                <p class="description">Realiza fotossíntese como uma planta. Por conta disso, o ar ao seu redor é sempre limpo e puro.</p>
+                <div class="details-grid">
+                    <div><strong>Método:</strong> Pedra da Folha</div>
+                    <div><strong>Habilidade:</strong> Guarda de Folha</div>
+                    <div><strong>Altura / Peso:</strong> 1,0 m / 25,5 kg</div>
+                    <div><strong>Principal Atributo:</strong> Defesa (130)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GLACEON -->
+        <section id="glaceon" class="pokemon-card">
+            <div class="card-left">
+                <span class="pokedex-num">#0471</span>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/471.png" alt="Glaceon">
+                <h2>Glaceon</h2>
+                <span class="type-badge ice">Gelo</span>
+            </div>
+            <div class="card-right">
+                <p class="description">Consegue baixar a temperatura do seu corpo rapidamente para congelar os pelos e transformá-los em espinhos de gelo.</p>
+                <div class="details-grid">
+                    <div><strong>Método:</strong> Pedra do Gelo</div>
+                    <div><strong>Habilidade:</strong> Manto de Gelo</div>
+                    <div><strong>Altura / Peso:</strong> 0,8 m / 25,9 kg</div>
+                    <div><strong>Principal Atributo:</strong> Def. Especial (110)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SYLVEON -->
+        <section id="sylveon" class="pokemon-card">
+            <div class="card-left">
+                <span class="pokedex-num">#0700</span>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/700.png" alt="Sylveon">
+                <h2>Sylveon</h2>
+                <span class="type-badge fairy">Fada</span>
+            </div>
+            <div class="card-right">
+                <p class="description">Envia ondas de carinho através de seus laços sensoriais para acalmar os sentimentos hostis dos oponentes.</p>
+                <div class="details-grid">
+                    <div><strong>Método:</strong> Amizade + Golpe Fada</div>
+                    <div><strong>Habilidade:</strong> Encanto</div>
+                    <div><strong>Altura / Peso:</strong> 1,0 m / 23,5 kg</div>
+                    <div><strong>Principal Atributo:</strong> Def. Especial (130)</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
